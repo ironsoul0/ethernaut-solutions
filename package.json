@@ -1,8 +1,7 @@
 {
-  "name": "ethernaut",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Temirzhan Yussupov <timka2609@gmail.com>",
+  "name": "foundry",
+  "version": "0.0.1",
+  "author": "Temirzhan Yussupov <temirzhan@float.capital>",
   "license": "MIT",
   "scripts": {
     "lint-contracts": "solhint 'solidity/**/*.sol'",
