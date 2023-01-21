@@ -6,3 +6,6 @@
 	path = lib/prb-test
 	url = https://github.com/paulrberg/prb-test
 	branch = 0.3.1
+[submodule "lib/solmate"]
+	path = lib/solmate
+	url = https://github.com/transmissions11/solmate
