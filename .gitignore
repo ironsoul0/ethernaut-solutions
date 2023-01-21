@@ -1,11 +1,22 @@
-# Compiler files
-cache/
+# General
+yarn-error.log
+node_modules
+.DS_STORE
+
+# Foundry files
+cache
+out-via-ir
+
+# Config files
+.env
+
+# Avoid ignoring gitkeep
+!/**/.gitkeep
+
+# Keep related abi
+out/*/*
 out/
 
-# Ignores development broadcast logs
-!/broadcast
-/broadcast/*/31337/
-/broadcast/**/dry-run/
-
-# Dotenv file
-.env
+# Keep the latest deployment only
+broadcast/*/*/*
+!broadcast/*/*/run-latest.json

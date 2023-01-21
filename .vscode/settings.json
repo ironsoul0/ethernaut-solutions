@@ -1,0 +1,45 @@
+{
+  // Use a solidity compiler that the plugin fetches from the cloud
+  "solidity.defaultCompiler": "remote",
+  "solidity.compileUsingRemoteVersion": "0.8.17",
+  // Get contract packages from the correct node_modules folder
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "solidity.remappings": [
+    // remap the forge contract libraries
+    "ds-test/=contracts/lib/ds-test/src/",
+    "forge-std/=contracts/lib/forge-std/src/",
+    "@chainlink=contracts/node_modules/@chainlink",
+    "@openzeppelin=contracts/node_modules/@openzeppelin",
+    "hardhat=contracts/node_modules/hardhat"
+  ],
+  // Force use of correct formatter for solidity files
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity"
+  },
+  // Make indentation better for all files
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  // Show whitespace, helps with formatting
+  "editor.renderWhitespace": "all",
+  "files.associations": {
+    "*.sol": "solidity"
+  },
+  "files.insertFinalNewline": true,
+  // Relieve the number of file-watchers needed by vs-code (reference: https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc)
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/*.bs.js": true,
+    "**/lib/*/**": true,
+    "**/cache/*/**": true,
+    "contracts/deployments/*/**": true,
+    "contracts/artifacts/*/**": true,
+    "contracts/out/*/**": true
+  },
+  "git.branchProtection": [
+    "dev",
+    "dev-next"
+  ]
+}
