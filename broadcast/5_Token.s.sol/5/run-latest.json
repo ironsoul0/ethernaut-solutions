@@ -1,0 +1,50 @@
+{
+  "transactions": [
+    {
+      "hash": "0x6c9fc03883f6ea6a4be9433f0e56f6fcc61e8cbb243290a3eb9dfba14d209225",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0xFd93780DC7057809CD90ccCd017365531b4BAf6C",
+      "function": null,
+      "arguments": null,
+      "rpc": "https://goerli.infura.io/v3/f40be16d787e47168253bf632e6a7bcd",
+      "transaction": {
+        "type": "0x02",
+        "from": "0x0482bb438b284a20e2384a07e3ccc83a968c4fc4",
+        "to": "0xfd93780dc7057809cd90cccd017365531b4baf6c",
+        "gas": "0x10922",
+        "value": "0x0",
+        "data": "0xa9059cbb000000000000000000000000fd93780dc7057809cd90cccd017365531b4baf6c0000000000000000000000000000000000000000000000000000000000000015",
+        "nonce": "0x1ab",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [
+    {
+      "transactionHash": "0x6c9fc03883f6ea6a4be9433f0e56f6fcc61e8cbb243290a3eb9dfba14d209225",
+      "transactionIndex": "0x2c",
+      "blockHash": "0x90466923fead0a3058cd1f2c0e5cb00d71e42832161c0078505ade65b8816bfe",
+      "blockNumber": "0x7f6817",
+      "from": "0x0482Bb438b284a20E2384A07E3ccc83A968c4fC4",
+      "to": "0xFd93780DC7057809CD90ccCd017365531b4BAf6C",
+      "cumulativeGasUsed": "0x1c4032d",
+      "gasUsed": "0xbff4",
+      "contractAddress": null,
+      "logs": [],
+      "status": "0x1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "type": "0x2",
+      "effectiveGasPrice": "0xb2d05e26"
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "path": "/Users/ironsoul/development/ethereum/security/ethernaut/broadcast/5_Token.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1674296334,
+  "chain": 5,
+  "multi": false,
+  "commit": "83ef7aa"
+}
