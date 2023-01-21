@@ -5,3 +5,4 @@ solmate/=lib/solmate/src
 contracts/=solidity/contracts
 interfaces/=solidity/interfaces
 test/=solidity/test
+scripts/=solidity/scripts
