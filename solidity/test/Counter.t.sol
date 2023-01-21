@@ -2,6 +2,7 @@
 pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
+
 import "../src/Counter.sol";
 
 contract CounterTest is Test {
@@ -15,6 +16,7 @@ contract CounterTest is Test {
   function testIncrement() public {
     counter.increment();
     assertEq(counter.number(), 1);
+    console.log("Counter is %s", address(counter));
   }
 
   function testSetNumber(uint256 x) public {
