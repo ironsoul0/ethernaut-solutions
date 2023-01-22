@@ -1,0 +1,50 @@
+{
+  "transactions": [
+    {
+      "hash": "0x4cb5f04ccc0b8288c406abe703db5285a819b4454ca539a8f3a634003fd1ef07",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x7b6aEfe81A5Cf904F26031D5fD26884F6a3ce92a",
+      "function": null,
+      "arguments": null,
+      "rpc": "https://goerli.infura.io/v3/f40be16d787e47168253bf632e6a7bcd",
+      "transaction": {
+        "type": "0x02",
+        "from": "0x0482bb438b284a20e2384a07e3ccc83a968c4fc4",
+        "to": "0x7b6aefe81a5cf904f26031d5fd26884f6a3ce92a",
+        "gas": "0x8940",
+        "value": "0x0",
+        "data": "0xe1afb08c884d698d5e433cefc002dc7726b77a5b00000000000000000000000000000000",
+        "nonce": "0x1cd",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [
+    {
+      "transactionHash": "0x4cb5f04ccc0b8288c406abe703db5285a819b4454ca539a8f3a634003fd1ef07",
+      "transactionIndex": "0x6",
+      "blockHash": "0x478e5cc3fc77a1126887c99ca6288e51060e65643c146c9f8f6bc47d1d381c7c",
+      "blockNumber": "0x7f7b3e",
+      "from": "0x0482Bb438b284a20E2384A07E3ccc83A968c4fC4",
+      "to": "0x7b6aEfe81A5Cf904F26031D5fD26884F6a3ce92a",
+      "cumulativeGasUsed": "0x1a3236",
+      "gasUsed": "0x5dd9",
+      "contractAddress": null,
+      "logs": [],
+      "status": "0x1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "type": "0x2",
+      "effectiveGasPrice": "0xb2d05e08"
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "path": "/Users/ironsoul/development/ethereum/security/ethernaut/broadcast/12_Privacy.s.sol/5/run-latest.json",
+  "returns": {},
+  "timestamp": 1674368101,
+  "chain": 5,
+  "multi": false,
+  "commit": "e32aac9"
+}

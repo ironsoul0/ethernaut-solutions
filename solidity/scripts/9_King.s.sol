@@ -27,7 +27,6 @@ contract Hack {
 
 contract Solve is Script, Test {
   address target = payable(0x3B7B66bc8988158e5aB6672E0C8b86f671aF9938);
-  using stdStorage for StdStorage;
 
   function run() public {
     vm.startBroadcast();
