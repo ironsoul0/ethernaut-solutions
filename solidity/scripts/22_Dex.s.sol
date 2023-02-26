@@ -24,11 +24,7 @@ contract Dex is Ownable {
     IERC20(token_address).transferFrom(msg.sender, address(this), amount);
   }
 
-  function swap(
-    address from,
-    address to,
-    uint256 amount
-  ) public {
+  function swap(address from, address to, uint256 amount) public {
     require(IERC20(from).balanceOf(msg.sender) >= amount, "Not enough to swap");
     uint256 swapAmount = getSwapPrice(from, to, amount);
     IERC20(from).transferFrom(msg.sender, address(this), amount);
@@ -36,11 +32,7 @@ contract Dex is Ownable {
     IERC20(to).transferFrom(address(this), msg.sender, swapAmount);
   }
 
-  function getSwapPrice(
-    address from,
-    address to,
-    uint256 amount
-  ) public view returns (uint256) {
+  function getSwapPrice(address from, address to, uint256 amount) public view returns (uint256) {
     return ((amount * IERC20(to).balanceOf(address(this))) / IERC20(from).balanceOf(address(this)));
   }
 
@@ -57,21 +49,12 @@ contract Dex is Ownable {
 contract SwappableToken is ERC20 {
   address private _dex;
 
-  constructor(
-    address dexInstance,
-    string memory name,
-    string memory symbol,
-    uint256 initialSupply
-  ) ERC20(name, symbol) {
+  constructor(address dexInstance, string memory name, string memory symbol, uint256 initialSupply) ERC20(name, symbol) {
     _mint(msg.sender, initialSupply);
     _dex = dexInstance;
   }
 
-  function approve(
-    address owner,
-    address spender,
-    uint256 amount
-  ) public {
+  function approve(address owner, address spender, uint256 amount) public {
     require(owner != _dex, "InvalidApprover");
     super._approve(owner, spender, amount);
   }
@@ -84,11 +67,7 @@ contract MyToken is ERC20 {
     return 1;
   }
 
-  function transferFrom(
-    address,
-    address,
-    uint256
-  ) public override returns (bool) {
+  function transferFrom(address, address, uint256) public override returns (bool) {
     return true;
   }
 }
