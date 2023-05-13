@@ -23,11 +23,7 @@ interface IPuzzleWallet {
 
   function deposit() external payable;
 
-  function execute(
-    address to,
-    uint256 value,
-    bytes calldata data
-  ) external payable;
+  function execute(address to, uint256 value, bytes calldata data) external payable;
 
   function multicall(bytes[] calldata data) external payable;
 }

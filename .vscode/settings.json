@@ -38,8 +38,11 @@
     "contracts/artifacts/*/**": true,
     "contracts/out/*/**": true
   },
-  "git.branchProtection": [
-    "dev",
-    "dev-next"
-  ]
+  "git.branchProtection": ["dev", "dev-next"],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/lib": true
+  }
 }
