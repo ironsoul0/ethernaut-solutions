@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identiier: UNLICENSED
 pragma solidity ^0.8.17;
 
 import "forge-std/Script.sol";
